@@ -2,10 +2,10 @@ import React from 'react'
 import './CheckoutProduct.css';
 
 function CheckoutProduct({ id, image, title, price, rating }) {
-    
+
     return (
         <div className='checkoutProduct'>
-            <img className='checkoutProduct__image' src={image} />
+            <img alt='' className='checkoutProduct__image' src={image} />
 
             <div className='checkoutProduct__info'>
                 <p className='checkoutProduct__title'>{title}</p>
@@ -17,7 +17,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
                     {Array(rating)
                         .fill()
                         .map((_, i) => (
-                            <p>🌟</p>
+                            <span role="img" aria-label="Love">🌟</span>
                         ))}
                 </div>
                 <button>Remove from Basket</button>
